@@ -112,6 +112,7 @@ public class MMController {
 		 		 modifyRequest.setScript((String) session.getAttribute("script"));
 		      } else {
 			 		 modifyRequest.setScript(null);
+//			 		 System.out.println("TEST");
 		      }
 	      
 	      if(session.getAttribute("postBackURL") != null) {
