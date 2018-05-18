@@ -49,14 +49,14 @@
 			<version>2.7.4</version>
 		</dependency>
 		<dependency>
-			<groupId>gov.nist.healthcare.hl7</groupId>
-			<artifactId>message-modifier-v2</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>2.3</version>
+		</dependency>
+		<dependency>
+			<groupId>gov.nist.healthcare.hl7</groupId>
+			<artifactId>message-modifier-v2</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 

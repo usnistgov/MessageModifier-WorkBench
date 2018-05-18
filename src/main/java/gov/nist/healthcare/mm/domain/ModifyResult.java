@@ -4,6 +4,7 @@ public class ModifyResult {
 	private String resultMessage;
 	private String modifyErrors;
 	private String loadedMessage;
+
 	
 	
 	public String getResultMessage() {

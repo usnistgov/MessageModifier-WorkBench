@@ -30,6 +30,8 @@ import gov.nist.healthcare.hl7.mm.v2.message.util.SyntaxChecker;
 import gov.nist.healthcare.hl7.mm.v2.nathancode.Issue;
 import gov.nist.healthcare.hl7.mm.v2.script.execution.MessageModifierService;
 import gov.nist.healthcare.hl7.mm.v2.script.execution.ModificationResult;
+import gov.nist.healthcare.mm.domain.DocumentationGenerator;
+import gov.nist.healthcare.mm.domain.DocumentationObject;
 import gov.nist.healthcare.mm.domain.ModifyRequest;
 import gov.nist.healthcare.mm.domain.ModifyResult;
 
@@ -220,6 +222,17 @@ System.out.println(modifyErrors);
 
     	return modifyResult;
     }
+    
+	@RequestMapping(value = "/getDocumentation", method = RequestMethod.GET)
+	@ResponseBody
+	public DocumentationObject getDocumentation(HttpServletResponse response, HttpServletRequest request)
+			throws IOException {
+		DocumentationObject documentationObject = new DocumentationObject();
+		DocumentationGenerator documentationGenerator = new DocumentationGenerator();
+		documentationObject = documentationGenerator.generateDocumentation();
+		return documentationObject;
+
+	}
     
     
     
